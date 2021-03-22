@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Roboto&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main__landing{
+    width: 100%;
+    height: 100vh;
+    background: #0062be;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 70px;
+    z-index: 1;
+}
+
+#btn__menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 7%;
+    top: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#btn__menu span{
+    width: 27px;
+    height: 4px;
+    background: #fff;
+    display: block;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+#btn__menu span:nth-child(1){
+    position: relative;
+    left: -7px;
+}
+
+#btn__menu span:nth-child(2){
+   
+}
+
+#btn__menu span:nth-child(3){
+    position: relative;
+    left: 7px;
+}
+
+#btn__menu span.active{
+    left: 0;
+}
+#btn__menu span:nth-child(1).active{
+    top: 3px;
+}
+#btn__menu span:nth-child(3).active{
+    top: -3px;
+}
+
+#btn__menu span.active2{
+    transform: scale(0);
+}
+
+.menu.toggle{
+    transform: translate(0);
+}
+
+
+.logo{
+    margin: 20px 0px 0px 25px;
+    z-index: 1;
+}
+
+.logo img{
+    max-width: 56px;
+}
+
+.menu{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.menu li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+.menu li a{
+    text-decoration: none;
+    padding: 5px;
+    color: #fff;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text__langing{
+    position: relative;
+    max-width: 600px;
+}
+
+.text__langing h2{
+    color: #fff;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.text__langing h2 span{
+    font-size: 2em;
+}
+
+.text__langing p{
+    color: #fff;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.text__langing a{
+    color: black;
+    background: #fff;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+}
+
+.images{
+    margin: 50px 50px 0px 0px;
+}
+
+.images img{
+    max-width: 220px;
+    transition: 0.7s;
+}
+
+.images2{
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+}
+
+.images2 li{
+    list-style: none;
+    margin: 0px 15px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.images2 img{
+    width: 30px;
+}
+
+.images2 li:hover{
+    transform: translateY(-15px);
+}
+
+.socials{
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials a{
+    transform: scale(0.6);
+    filter: invert(1);
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.menu li a:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    left: 17%;
+    font-size: 0.4em;
+    width: 2px;
+    height: 2px;
+    background: black;
+    transform: translateY(30px);
+    transition: 0.2s cubic-bezier(.51,.6,.83,.67);
+    display: none;
+}
+
+.menu li a:hover::before{
+    width: 10px;
+    
+}
+
+@media (max-width: 1024px){
+    .images{
+        margin: 50px 0px 0px 0px;
+    }
+    .text__langing{
+        max-width: 500px;
+    }
+    .images2{
+        left: 43%;
+    }
+
+}
+
+@media (max-width: 900px){
+    .images{
+        margin: 50px 0px 0px 0px;
+    }
+    .text__langing{
+        max-width: 450px;
+    }
+    .images2{
+        left: 43%;
+    }
+    
+
+}
+
+@media (max-width: 700px){
+    .logo{
+        position: absolute;
+        left: 28px;
+    }
+}
+@media (min-width: 769px){
+    #btn__menu{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .images{
+        margin: 70px 0px 0px 400px;
+    }
+    .images img{
+        max-width: 130px;
+    }
+    .text__langing{
+        top: 90px;
+        left: -55px;
+    }
+    .images2{
+        left: 11%;
+        bottom: 50px;
+    }
+    .menu{
+        position: absolute;
+        left: 0;
+        flex-direction: column;
+        top: 80px;
+        background: #fff;
+        width: 70%;
+        height: 100vh;
+        top: 0;
+        justify-content: center;
+        align-items: flex-start;
+        transition: 0.4s cubic-bezier(.51,.6,.83,.67);
+        transform: translateX(-100%);
+    }
+
+    .menu li{
+        line-height: 4em;
+        margin-left: 20%;
+    }
+    
+    .menu li a{
+        color: #333;
+        font-size: 2em;
+    
+    }
+    .menu li a:nth-child(1)::before{
+        display: block;
+    }
+   
+}
+
+@media (max-width: 600px){   
+    .logo{
+        left: 55px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .images{
+       margin: 0;
+    }
+    .images img{
+        max-width: 120px;
+    }
+    .text__langing{
+        top: 15px;
+        min-width: 450px;
+        left: 5px;
+        margin-bottom: 40px;
+    }
+    .text__langing h2{
+        font-size: 2em;
+        line-height: 2em;
+    }
+    .text__langing p{
+        font-size: 1.1em;
+    }
+    .text__langing{
+        
+    }
+    .images2{
+        left: 10%;
+        bottom: 10px;
+    }
+    .socials{
+        margin-top: 20%; 
+    }
+
+}
+
+@media (max-width: 420px){   
+    .logo{
+        left: 3px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .images{
+       margin: 0;
+    }
+    .images img{
+        max-width: 60px;
+    }
+    .text__langing{
+        top: 10px;
+        min-width: 300px;
+        left: 5px;
+        margin-bottom: 50px;
+    }
+    .text__langing h2{
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    .text__langing h2 span{
+        font-size: 1em;
+    }
+    .text__langing p{
+        font-size: 1em;
+    }
+    .text__langing{
+        
+    }
+    .images2{
+        left: 10%;
+        bottom: 10px;
+    }
+    .images2 img{
+        width: 20px;
+    }
+    .socials{
+        margin-top: 70%; 
+    }
+    
+    .menu{
+        width: 100%;
+    }
+    #btn__menu span.active{
+       background: #333;
+    }
+    
+}
+
+@media (max-width: 414px){   
+    .logo{
+        left: 25px;
+    }
+}
+
+@media (max-width: 375px){   
+    .logo{
+        left: 5px;
+    }
+}
